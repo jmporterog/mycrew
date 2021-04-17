@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "c0936d49-f4b6-44a1-85b5-73573c426e4c",
+		"name": "My Crew",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "app-login",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "test-user-1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test-user-1",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8181/auth/realms/mycrew/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"auth",
+						"realms",
+						"mycrew",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
